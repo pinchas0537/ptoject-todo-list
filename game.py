@@ -18,7 +18,8 @@ def get_user_choice() -> str:
         2. הצגת כל המשימות
         3. מחיקת משימה
         4. עריכת משימה
-        5. יציאה
+        5. הצגת מיקום משימה ברשימה
+        6. יציאה
         בחר את האפשרות הרצויה: """)
     return choice
 
@@ -39,3 +40,9 @@ def edit_task(tasks: list, index: int, new_task: str) -> bool:
     else:
         print("No such number was found in the list!")
         return  False
+
+def get_task_index_from_user(index: int) -> int:
+    if index > 0:
+        print(f"The mission index is: {index - 1}")
+    else:
+        print("Invalid input")
