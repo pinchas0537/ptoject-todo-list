@@ -21,4 +21,3 @@ def get_user_choice() -> str:
         5. יציאה
         בחר את האפשרות הרצויה: """)
     return choice
-print(get_user_choice())
