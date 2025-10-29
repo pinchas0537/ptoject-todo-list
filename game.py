@@ -27,7 +27,15 @@ def delete_task(tasks: list, index: int) -> bool:
         tasks.pop(index - 1)
         print("The task was successfully deleted!")
         return True
-    elif index > len(tasks):
-        print("No such number was found in the list!")
     else:
+        print("No such number was found in the list!")
+        return  False
+    
+def edit_task(tasks: list, index: int, new_task: str) -> bool:
+    if index <= len(tasks):
+        tasks[index -1] = new_task
+        print("The task has been updated successfully!")
+        return True
+    else:
+        print("No such number was found in the list!")
         return  False
