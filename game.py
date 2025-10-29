@@ -2,8 +2,7 @@ todo_list = []
 
 def add_task(tasks: list, task: str) -> None:
     tasks.append(task)
-    pass
-
+ 
 def show_all_tasks(tasks: list) -> None:
     if len(tasks) == 0:
         print("The list is empty!")
@@ -12,3 +11,14 @@ def show_all_tasks(tasks: list) -> None:
         for task in tasks:
             index +=1
             print(f"{index}. {task}" )
+
+def get_user_choice() -> str:
+    choice  = input("""
+        1. הוספת משימה
+        2. הצגת כל המשימות
+        3. מחיקת משימה
+        4. עריכת משימה
+        5. יציאה
+        בחר את האפשרות הרצויה: """)
+    return choice
+print(get_user_choice())
