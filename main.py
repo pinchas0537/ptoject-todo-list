@@ -10,7 +10,9 @@ def main() -> None:
             case "2":
                 game.show_all_tasks(game.todo_list)
             case "3":
-                print("זה עדיין בפיתוח")
+                game.show_all_tasks(game.todo_list)
+                index = int(input("Which task to delete? (Choose a number)"))
+                game.delete_task(game.todo_list,index)
             case "4":
                 print("זה עדיין בפיתוח")
             case "5":

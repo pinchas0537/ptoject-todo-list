@@ -21,3 +21,13 @@ def get_user_choice() -> str:
         5. יציאה
         בחר את האפשרות הרצויה: """)
     return choice
+
+def delete_task(tasks: list, index: int) -> bool:
+    if index <= len(tasks):
+        tasks.pop(index - 1)
+        print("The task was successfully deleted!")
+        return True
+    elif index > len(tasks):
+        print("No such number was found in the list!")
+    else:
+        return  False
