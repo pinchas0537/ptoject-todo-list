@@ -55,4 +55,4 @@ def search_tasks(tasks: list, keyword: str) -> list[tuple]:
         index += 1
         if keyword in i:
             result.append((index,i))
-    return result
+    print(result)

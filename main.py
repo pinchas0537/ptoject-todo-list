@@ -14,10 +14,13 @@ def main() -> None:
                 index = int(input("Which task to delete? (Choose a number)"))
                 game.delete_task(game.todo_list,index)
             case "4":
-                game.show_all_tasks(game.todo_list)
-                index = int(input("Which task to edit? (Choose a number)"))
-                nwo_task = input("Please enter the new task:")
-                game.edit_task(game.todo_list,index,nwo_task)
+                if len(game.todo_list) > 0:
+                    game.show_all_tasks(game.todo_list)
+                    index = int(input("Which task to edit? (Choose a number)"))
+                    nwo_task = input("Please enter the new task:")
+                    game.edit_task(game.todo_list,index,nwo_task)
+                else:
+                    print ("The list is empty.")
             case "5":
                 index = int(input("Enter the task number you want to see."))
                 game.get_task_index_from_user(index)
