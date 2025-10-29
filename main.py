@@ -19,6 +19,9 @@ def main() -> None:
                 nwo_task = input("Please enter the new task:")
                 game.edit_task(game.todo_list,index,nwo_task)
             case "5":
+                index = int(input("Enter the task number you want to see."))
+                game.get_task_index_from_user(index)
+            case "6":
                 break
             case _:
                 print("הבקשה לא נכונה!")
