@@ -22,6 +22,12 @@ def main() -> None:
                 index = int(input("Enter the task number you want to see."))
                 game.get_task_index_from_user(index)
             case "6":
+                if len(game.todo_list) > 0:
+                    keyword = input("Enter a word you want to search for:")
+                    game.search_tasks(game.todo_list,keyword)
+                else:
+                    print ("The list is empty.")
+            case "7":
                 break
             case _:
                 print("הבקשה לא נכונה!")

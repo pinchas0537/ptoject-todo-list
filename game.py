@@ -19,7 +19,8 @@ def get_user_choice() -> str:
         3. מחיקת משימה
         4. עריכת משימה
         5. הצגת מיקום משימה ברשימה
-        6. יציאה
+        6. חיפוש מילה מתוך הרשימה
+        7. יציאה
         בחר את האפשרות הרצויה: """)
     return choice
 
@@ -46,3 +47,12 @@ def get_task_index_from_user(index: int) -> int:
         print(f"The mission index is: {index - 1}")
     else:
         print("Invalid input")
+        
+def search_tasks(tasks: list, keyword: str) -> list[tuple]:
+    result = []
+    index = -1
+    for i in tasks:
+        index += 1
+        if keyword in i:
+            result.append((index,i))
+    return result
