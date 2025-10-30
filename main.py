@@ -8,11 +8,17 @@ def main() -> None:
                 task = input("Enter a task:")
                 game.add_task(game.todo_list,task)
             case "2":
-                game.show_all_tasks(game.todo_list)
+                if len(game.todo_list) > 0:
+                    game.show_all_tasks(game.todo_list)
+                else:
+                    print ("The list is empty.")
             case "3":
-                game.show_all_tasks(game.todo_list)
-                index = int(input("Which task to delete? (Choose a number)"))
-                game.delete_task(game.todo_list,index)
+                if len(game.todo_list) > 0:
+                    game.show_all_tasks(game.todo_list)
+                    index = int(input("Which task to delete? (Choose a number)"))
+                    game.delete_task(game.todo_list,index)
+                else:
+                    print ("The list is empty.")
             case "4":
                 if len(game.todo_list) > 0:
                     game.show_all_tasks(game.todo_list)
@@ -22,8 +28,11 @@ def main() -> None:
                 else:
                     print ("The list is empty.")
             case "5":
-                index = int(input("Enter the task number you want to see."))
-                game.get_task_index_from_user(index)
+                if len(game.todo_list) > 0:
+                    index = int(input("Enter the task number you want to see."))
+                    game.get_task_index_from_user(index)
+                else:
+                    print ("The list is empty.")
             case "6":
                 if len(game.todo_list) > 0:
                     keyword = input("Enter a word you want to search for:")
